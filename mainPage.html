@@ -13,6 +13,7 @@
     <!--Custom CSS-->
     <link rel="stylesheet" href="css/Carpool.css" type= text/css>
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'  type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'  type='text/css'>
 <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and meadia queries-->
     <!--[if 1t IE 9]-->
     <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
@@ -27,26 +28,27 @@
             <a class="navbar-brand" href="#">Carpool Windsor</a>
         </div>
         <div  id="CustomerView-navbar">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a class="nav_item" href="#">About us</a>
-                </li>
-                <li>
-                    <a class="nav_item" href="#">Services</a>
-                </li>
-                <li>
-                    <a class="nav_item" href="#">Contact</a>
-                </li>
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li>-->
+                    <!--<a class="nav_item" href="#">About us</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a class="nav_item" href="#">Services</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a class="nav_item" href="#">Contact</a>-->
+                <!--</li>-->
 
-            </ul>
+            <!--</ul>-->
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a id="signIn"  data-toggle="modal" data-target="#logInModal"><span class="glyphicon glyphicon-user"></span> Login</a ></li>
-                <li><a id="signUp"  data-toggle="modal" data-target="#signUpModal"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a ></li>
+                <li><a id="signIn"  data-toggle="modal" data-target="#logInModal" style="font-family: Oswald"><span class="glyphicon glyphicon-user"></span> Login</a ></li>
+                <li><a id="signUp"  data-toggle="modal" data-target="#signUpModal" style="font-family: Oswald"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a ></li>
             </ul>
         </div>
     </div>
 </nav>
+
 
 <!--nav end-->
 
@@ -60,8 +62,18 @@
         <div class="poster hidden">
             <img src="./Going-Places/Snapshots/Going-Places.jpg" alt="">
         </div>
+        <div id="home-page-content" style="position: absolute;bottom: 45%;margin-top:200px;text-align: center; left: 0;width: 100%;" class="container">
+
+            <div class="lead"><h1 style="font-family:Oswald;color: #ffffff;text-shadow: 0px 0px 5px rgba(0,0,0,0.55); font-size: 250%">DISCOVER YOUR NEW LIFE</h1>
+            <h1 style="font-family:Oswald;color: #ffffff;text-shadow: 0px 0px 5px rgba(0,0,0,0.55); font-size: 150%;margin-top: 7%"><span style="margin-right: 40px">Easy</span><span>Secure</span><span style="margin-left: 40px">Fast</span></h1>
+            </div>
+
+        </div>
     </div>
+
 </div>
+
+
 
 <div class="modal fade" id="signUpModal">
     <div class="modal-dialog" role="document">
