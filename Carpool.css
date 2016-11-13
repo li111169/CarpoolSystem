@@ -52,7 +52,8 @@
     color: #F0FFF0;
 }
 
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand,
+.navbar-inverse .navbar-brand{
     color: #F0FFF0;
     font-size: 25px;
     font-family:'Lobster'
@@ -69,14 +70,49 @@
     font-size: 20px;
 }
 /*navbar css end*/
+.modal{
+    top:10%;
+}
+/*homepage content begin*/
 
-.row .col-lg-6{
+/*homepage content end*/
+
+/*search page css*/
+
+
+.nav-tabs li a{
+    padding: 15px 40px;
+    border:1px solid #ededed;
+    border-top: 2px solid #ededed;
+    border-right: 0px none;
+    background: #7a81f4;
+    color:#fff;
+    border-radius: 0px;
+    margin-right: 0px;
+    font-weight: bold;
+    transition: all 0.3s ease-in 0s;
+}
+
+.nav-tabs li a:hover{
+    border-bottom-color: #ededed;
+    border-right: 0px none;
+    background: #00b0ad;
+    color: #fff;
+}
+.nav-tabs li a i{
+    display: inline-block;
+    text-align: center;
+    margin-right:10px;
+}
+/*search page css end*/
+
+.row .col-lg-8{
 
     border-style: solid ;
     border-width: 1px;
     border-color: #e1e3e8;
 }
-.row .col-lg-6:hover{
+.row .col-lg-8:hover{
     background-color: white;
     box-shadow: 10px 10px 20px #e1e3e8, -10px 10px 20px #e1e3e8;
 }
