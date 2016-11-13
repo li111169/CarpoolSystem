@@ -43,6 +43,13 @@
 }
 
 /*mainPage css--------navbar*/
+.navbar{
+    margin: 0px;
+    border:none;
+}
+.navbar-inverse{
+    z-index: 3;
+}
 .navbar-default {
     background-color: transparent;
     border:none;
@@ -67,43 +74,63 @@
 
 .nav > li > a {
     padding: 15px 20px;
-    font-size: 20px;
+    font-size: 15px;
 }
 /*navbar css end*/
 .modal{
     top:10%;
 }
-/*homepage content begin*/
-
-/*homepage content end*/
 
 /*search page css*/
 
+.nav-pills{
+    /*border: none;*/
+    background-color: #f6f6f6;
 
-.nav-tabs li a{
-    padding: 15px 40px;
-    border:1px solid #ededed;
-    border-top: 2px solid #ededed;
-    border-right: 0px none;
-    background: #7a81f4;
-    color:#fff;
-    border-radius: 0px;
-    margin-right: 0px;
+
+}
+.nav-pills li{
+    color: #f6f6f6;
+    outline: none;
+}
+
+.nav-pills li a{
+    padding: 10px 30px;
+
+    border-color: #f6f6f6;
+    background: #f6f6f6;
+    color:black;
+    border-radius: 0;
+    margin: 0;
     font-weight: bold;
+    outline: none;
     transition: all 0.3s ease-in 0s;
 }
 
-.nav-tabs li a:hover{
-    border-bottom-color: #ededed;
-    border-right: 0px none;
+.nav-pills li a:hover{
     background: #00b0ad;
-    color: #fff;
 }
-.nav-tabs li a i{
-    display: inline-block;
-    text-align: center;
-    margin-right:10px;
+
+.nav-pills li.active a,
+.nav-pills li.active a:focus,
+.nav-pills li.active a:hover{
+
+    padding:10px 40px;
+
+
 }
+
+.tabExtBox{
+    height: 116px;
+    width: 100%;
+    background-color:#f6f6f6 ;
+}
+.navBox{
+    width: 100%;
+
+}
+
+
 /*search page css end*/
 
 .row .col-lg-8{
