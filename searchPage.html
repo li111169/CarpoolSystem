@@ -21,13 +21,15 @@
     <style>
         body{
             padding-top: 50px;
+
         }
+
     </style>
 </head>
 <body>
 <!--home page content-->
 
-<nav class=" navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class=" navbar navbar-inverse navbar-fixed-top" style="display: block" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Carpool Windsor</a>
@@ -49,18 +51,37 @@
     </div>
 </nav>
 
-<ul class="nav nav-pills nav-pills-position">
-    <li class="active"><a data-toggle="tab" href="#travelInfo">Your Travel</a></li>
-    <li><a data-toggle="tab" href="#collectionInfo">Your Collected</a></li>
-    <li><a data-toggle="tab" href="#postedInfo">Your Posted</a></li>
-</ul>
+<div class="navBox" style="display: block;position: relative;">
+    <ul class="nav nav-pills nav-justified ">
+        <li class="active"><a data-toggle="pill" href="#travelInfo"><span class="one">Your Travel</span></a></li>
+        <li><a data-toggle="pill" href="#collectionInfo"><span class="two">Your Collected</span></a></li>
+        <li><a data-toggle="pill" href="#postedInfo"><span class="three">Your Posted</span></a></li>
+    </ul>
 
-<div class="tab-content">
-    <div id="travelInfo" class=" tab-pane fade in active">
-        <!--<div class="tabExtraBox">-->
+    <div class="tabExtBox">
+        <div class="container" style="padding-top: 3%;">
 
-        <!--</div>-->
-        <div class="row infoLabel">
+            <div class="row">
+                <a class="col-md-2"></a>
+                <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Departure...">
+                </div>
+
+                <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Arrival...">
+                </div>
+                <a class="col-md-2"></a>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="tab-content" style="position: relative; display: block;">
+    <div id="travelInfo"class=" tab-pane fade in active container">
+        <div class="row infoLabel " >
             <a class="col-lg-2"></a>
             <div class="col-lg-8">
                 <div class="basicInfo">
@@ -75,9 +96,8 @@
             <a class="col-lg-2"></a>
         </div>
 
-        <div class="row">
+        <div class="row infoLabel" style="position: relative; display: block">
             <a class="col-lg-2"></a>
-
             <div class="col-lg-8">
                 <div class="basicInfo">
                     <span class="dest">windsor<span> to </span>toronto </span>
@@ -91,9 +111,8 @@
             <a class="col-lg-2"></a>
         </div>
 
-        <div class="row">
+        <div class="row infoLabel" style="position: relative; display: block">
             <a class="col-lg-2"></a>
-
             <div class="col-lg-8">
                 <div class="basicInfo">
                     <span class="dest">windsor<span> to </span>toronto </span>
@@ -107,9 +126,8 @@
             <a class="col-lg-2"></a>
         </div>
 
-        <div class="row">
+        <div class="row infoLabel" style="position: relative; display: block">
             <a class="col-lg-2"></a>
-
             <div class="col-lg-8">
                 <div class="basicInfo">
                     <span class="dest">windsor<span> to </span>toronto </span>
@@ -122,18 +140,30 @@
             </div>
             <a class="col-lg-2"></a>
         </div>
+        <div class="row infoLabel" style="position: relative; display: block">
+            <a class="col-lg-2"></a>
+            <div class="col-lg-8">
+                <div class="basicInfo">
+                    <span class="dest">windsor<span> to </span>toronto </span>
+                    <span class="de_time">departure time:</span>
+                </div>
+                <h3>driver name</h3>
+                <p>car make:</p>
+                <p>driver license type:</p>
+                <p>arrival time:</p>
+            </div>
+            <a class="col-lg-2"></a>
+        </div>
+    </div>
+
 
 
     <div id="collectionInfo" class="tab-pane fade in active">
-        <!--<div class="tabBox">-->
 
-        <!--</div>-->
 
     </div>
     <div id="postedInfo" class="tab-pane fade in active">
-        <!--<div class="tabBox">-->
 
-        <!--</div>-->
     </div>
 
 
@@ -143,6 +173,6 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-<script src="js/projectjs.js"></script>
+<script src="js/searchPage.js"></script>
 </body>
 </html>
