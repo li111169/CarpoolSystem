@@ -50,25 +50,25 @@
         </div>
     </div>
 </nav>
-
+<div data-ng-app ='infoMatch'>
 <div class="navBox" style="display: block;position: relative;">
     <ul class="nav nav-pills nav-justified ">
-        <li class="active"><a data-toggle="pill" href="#travelInfo"><span class="one">Your Travel</span></a></li>
-        <li><a data-toggle="pill" href="#collectionInfo"><span class="two">Your Collected</span></a></li>
-        <li><a data-toggle="pill" href="#postedInfo"><span class="three">Your Posted</span></a></li>
+        <li id="one" class="active"><a data-toggle="tab" href="#travelInfo"><span >Your Travel</span></a></li>
+        <li id="two"><a data-toggle="tab" href="#collectionInfo"><span>Your Collected</span></a></li>
+        <li id="three"><a data-toggle="tab" href="#postedInfo"><span>Your Posted</span></a></li>
     </ul>
 
     <div class="tabExtBox">
-        <div class="container" style="padding-top: 3%;">
+        <div class="container" style="padding-top: 3%">
 
-            <div class="row">
+            <div class="row" ng-controller="searchController">
                 <a class="col-md-2"></a>
                 <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Departure...">
+                        <input type="text" ng-model="departureName" class="form-control" placeholder="Departure...">
                 </div>
 
                 <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Arrival...">
+                        <input type="text" ng-modal="arrivalName" class="form-control" placeholder="Arrival...">
                 </div>
                 <a class="col-md-2"></a>
 
@@ -80,13 +80,13 @@
 
 
 <div class="tab-content" style="position: relative; display: block;">
-    <div id="travelInfo"class=" tab-pane fade in active container">
+    <div id="travelInfo"  class=" tab-pane fade in active container">
         <div class="row infoLabel " >
             <a class="col-lg-2"></a>
             <div class="col-lg-8">
                 <div class="basicInfo">
-                    <span class="dest">windsor<span> to </span>toronto </span>
-                    <span class="de_time">departure time:</span>
+                    <span class="dest" ng-bind="departureName">windsor</span> to <span ng-bind="arrivalName">toronto </span>
+                    <span class="de_time" >departure time:</span>
                 </div>
                 <h3>driver name</h3>
                 <p>car make:</p>
@@ -168,11 +168,11 @@
 
 
 </div>
-
+</div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+<script src="bower_components/angular.min.js"></script>
 <script src="js/searchPage.js"></script>
 </body>
 </html>
