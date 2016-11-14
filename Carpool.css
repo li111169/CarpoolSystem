@@ -1,5 +1,4 @@
-
-/*mainPage css-----------video*/
+/*mainPage css-----------video------------------------------------------------------------------------------------------*/
 .homepage-hero-module {
     border-right: none;
     border-left: none;
@@ -41,8 +40,7 @@
 .video-container video.fillWidth {
     width: 100%;
 }
-
-/*mainPage css--------navbar*/
+/*mainPage css-----------navbar-----------------------------------------------------------------------------------------*/
 .navbar{
     margin: 0px;
     border:none;
@@ -76,7 +74,7 @@
     padding: 15px 20px;
     font-size: 15px;
 }
-/*navbar css end*/
+/*mainPage css-----------content----------------------------------------------------------------------------------------*/
 .modal{
     top:10%;
 }
@@ -108,25 +106,39 @@
 }
 
 .nav-pills li a:hover{
-    background: #00b0ad;
+    color: #4285f4;
+    background-color: #f6f6f6;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+       color: #414141;
+       background-color:#f6f6f6;
+       padding:10px 40px;
+
+}
+.nav-pills > li.active > a >span,
+.nav-pills > li.active > a >span:hover,
+.nav-pills > li.active > a >span:focus {
+    padding:10px 0px;
+    border-bottom-style: outset;
+    border-bottom-color:#66ffff;
 }
 
-.nav-pills li.active a,
-.nav-pills li.active a:focus,
-.nav-pills li.active a:hover{
-
-    padding:10px 40px;
-
-
-}
 
 .tabExtBox{
-    height: 116px;
+    height: 100px;
     width: 100%;
     background-color:#f6f6f6 ;
 }
 .navBox{
     width: 100%;
+
+}
+.navBox ul{
+    border-bottom: ridge;
+    border-width: 2px;
+    border-bottom-color: gainsboro;
 
 }
 
@@ -147,18 +159,7 @@
     height: 30px;
     margin-top: 10px;
 }
-.basicInfo .de_time{
-    font-size: 15px;
-    /*line-height: 22px;*/
-    margin-top: 15px;
-    float: right;
 
-}
-.basicInfo .dest{
-    font-size: 30px;
-    /*line-height: 44px;*/
-    /*margin-bottom: 22px;*/
-}
 
 
 
