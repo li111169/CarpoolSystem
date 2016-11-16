@@ -21,12 +21,13 @@
     <style>
         body{
             padding-top: 50px;
+            height: 100%;
 
         }
 
     </style>
 </head>
-<body>
+<body data-ng-app ='infoMatch' ng-controller="searchController" >
 <!--home page content-->
 
 <nav class=" navbar navbar-inverse navbar-fixed-top" style="display: block" role="navigation">
@@ -50,25 +51,24 @@
         </div>
     </div>
 </nav>
-<div data-ng-app ='infoMatch'>
+
 <div class="navBox" style="display: block;position: relative;">
     <ul class="nav nav-pills nav-justified ">
         <li id="one" class="active"><a data-toggle="tab" href="#travelInfo"><span >Your Travel</span></a></li>
-        <li id="two"><a data-toggle="tab" href="#collectionInfo"><span>Your Collected</span></a></li>
+        <li id="two"><a data-toggle="tab" href="#collectedInfo"><span>Your Collected</span></a></li>
         <li id="three"><a data-toggle="tab" href="#postedInfo"><span>Your Posted</span></a></li>
     </ul>
 
     <div class="tabExtBox">
         <div class="container" style="padding-top: 3%">
-
-            <div class="row" ng-controller="searchController">
+            <div class="row" >
                 <a class="col-md-2"></a>
                 <div class="col-md-4">
                         <input type="text" ng-model="departureName" class="form-control" placeholder="Departure...">
                 </div>
 
                 <div class="col-md-4">
-                        <input type="text" ng-modal="arrivalName" class="form-control" placeholder="Arrival...">
+                        <input type="text" ng-model="arrivalName" class="form-control" placeholder="Arrival...">
                 </div>
                 <a class="col-md-2"></a>
 
@@ -80,77 +80,15 @@
 
 
 <div class="tab-content" style="position: relative; display: block;">
-    <div id="travelInfo"  class=" tab-pane fade in active container">
-        <div class="row infoLabel " >
+    <div id="travelInfo" class=" tab-pane fade in active container" style="list-style-type: none">
+        <div class="row infoLabel" ng-repeat="driver in drivers"  >
             <a class="col-lg-2"></a>
             <div class="col-lg-8">
                 <div class="basicInfo">
-                    <span class="dest" ng-bind="departureName">windsor</span> to <span ng-bind="arrivalName">toronto </span>
-                    <span class="de_time" >departure time:</span>
+                    <h1><span>{{driver.departure}}</span> to <span>{{driver.arrival}} </span></h1>
+                    <span>{{driver.driverLicense}}</span>
+                    <span>{{driver.carMade}}</span>
                 </div>
-                <h3>driver name</h3>
-                <p>car make:</p>
-                <p>driver license type:</p>
-                <p>arrival time:</p>
-            </div>
-            <a class="col-lg-2"></a>
-        </div>
-
-        <div class="row infoLabel" style="position: relative; display: block">
-            <a class="col-lg-2"></a>
-            <div class="col-lg-8">
-                <div class="basicInfo">
-                    <span class="dest">windsor<span> to </span>toronto </span>
-                    <span class="de_time">departure time:</span>
-                </div>
-                <h3>driver name</h3>
-                <p>car make:</p>
-                <p>driver license type:</p>
-                <p>arrival time:</p>
-            </div>
-            <a class="col-lg-2"></a>
-        </div>
-
-        <div class="row infoLabel" style="position: relative; display: block">
-            <a class="col-lg-2"></a>
-            <div class="col-lg-8">
-                <div class="basicInfo">
-                    <span class="dest">windsor<span> to </span>toronto </span>
-                    <span class="de_time">departure time:</span>
-                </div>
-                <h3>driver name</h3>
-                <p>car make:</p>
-                <p>driver license type:</p>
-                <p>arrival time:</p>
-            </div>
-            <a class="col-lg-2"></a>
-        </div>
-
-        <div class="row infoLabel" style="position: relative; display: block">
-            <a class="col-lg-2"></a>
-            <div class="col-lg-8">
-                <div class="basicInfo">
-                    <span class="dest">windsor<span> to </span>toronto </span>
-                    <span class="de_time">departure time:</span>
-                </div>
-                <h3>driver name</h3>
-                <p>car make:</p>
-                <p>driver license type:</p>
-                <p>arrival time:</p>
-            </div>
-            <a class="col-lg-2"></a>
-        </div>
-        <div class="row infoLabel" style="position: relative; display: block">
-            <a class="col-lg-2"></a>
-            <div class="col-lg-8">
-                <div class="basicInfo">
-                    <span class="dest">windsor<span> to </span>toronto </span>
-                    <span class="de_time">departure time:</span>
-                </div>
-                <h3>driver name</h3>
-                <p>car make:</p>
-                <p>driver license type:</p>
-                <p>arrival time:</p>
             </div>
             <a class="col-lg-2"></a>
         </div>
@@ -158,21 +96,39 @@
 
 
 
-    <div id="collectionInfo" class="tab-pane fade in active">
-
+    <div id="collectedInfo" class="tab-pane fade in active">
 
     </div>
+
     <div id="postedInfo" class="tab-pane fade in active">
 
     </div>
 
 
 </div>
-</div>
+
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/angular.min.js"></script>
 <script src="js/searchPage.js"></script>
+
+<script>
+    angular.module('infoMatch', []).controller('searchController', function($scope) {
+
+        $scope.drivers=[
+            {departure:'toronto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
+            {departure:'tronto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
+            {departure:'oronto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
+            {departure:'toonto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
+            {departure:'tornto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
+            {departure:'tronto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
+            {departure:'tornto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
+            {departure:'oronto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'}
+
+        ];
+//
+    });
+</script>
 </body>
 </html>
