@@ -60,15 +60,15 @@
     </ul>
 
     <div class="tabExtBox">
-        <div class="container" style="padding-top: 3%">
+        <div class="container" style="padding-top: 1%;padding-bottom: 1%">
             <div class="row" >
                 <a class="col-md-2"></a>
                 <div class="col-md-4">
-                        <input type="text" ng-model="departureName" class="form-control" placeholder="Departure...">
+                        <input type="text" ng-model="search.departure" class="form-control" placeholder="Departure...">
                 </div>
 
                 <div class="col-md-4">
-                        <input type="text" ng-model="arrivalName" class="form-control" placeholder="Arrival...">
+                        <input type="text" ng-model="search.arrival" class="form-control" placeholder="Arrival...">
                 </div>
                 <a class="col-md-2"></a>
 
@@ -80,17 +80,27 @@
 
 
 <div class="tab-content" style="position: relative; display: block;">
-    <div id="travelInfo" class=" tab-pane fade in active container" style="list-style-type: none">
-        <div class="row infoLabel" ng-repeat="driver in drivers"  >
-            <a class="col-lg-2"></a>
-            <div class="col-lg-8">
-                <div class="basicInfo">
-                    <h1><span>{{driver.departure}}</span> to <span>{{driver.arrival}} </span></h1>
-                    <span>{{driver.driverLicense}}</span>
-                    <span>{{driver.carMade}}</span>
-                </div>
+    <div id="travelInfo" class=" tab-pane fade in active container" >
+        <div class="row infoLabel media" ng-repeat="driver in drivers | filter:search"  >
+            <!--<a class="col-md-2"></a>-->
+            <div class="col-md-7 basicInfo" style="float: none;">
+
+                    <a class="media-left">
+                        <img class="media-object" src="bower_components/source/XBOX%20360.ico" alt="Generic placeholder image">
+                    </a>
+                    <div class="media-body">
+                        <span class="fromTo"><span class="route">{{driver.departure}}</span> to <span class="route">{{driver.arrival}} </span></span>
+                        <span ng:click="selected.value=$index"><span class="glyphicon glyphicon-heart" ng-class="currentColor:selected.value==$index"></span></span>
+                        <span class="time">Departure Time:{{driver.depTime}}</span>
+                        <span class="name">Driver Name:{{driver.name}}</span>
+                        <!--<span class="license">License Type:{{driver.driverLicense}}</span>-->
+                        <span class="make">Car Make:{{driver.carMake}}</span>
+                        <button class="btn-success" style="float: right">detail</button>
+
+                    </div>
+
             </div>
-            <a class="col-lg-2"></a>
+            <!--<a class="col-md-2"></a>-->
         </div>
     </div>
 
@@ -117,14 +127,14 @@
     angular.module('infoMatch', []).controller('searchController', function($scope) {
 
         $scope.drivers=[
-            {departure:'toronto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
-            {departure:'tronto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
-            {departure:'oronto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
-            {departure:'toonto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
-            {departure:'tornto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
-            {departure:'tronto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
-            {departure:'tornto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'},
-            {departure:'oronto',arrival:'windsor',name:'lize',carMade:'toyota',driverLicense:'G2'}
+//            {id:1,departure:'toronto',arrival:'windsor',name:'lize',carMake:'toyota',driverLicense:'G2',depTime:'10:00am'},
+//            {id:2,departure:'windsor',arrival:'toronto',name:'lize',carMake:'toyota',driverLicense:'G2',depTime:'10:00am'},
+            {id:3,departure:'windsor',arrival:'kingston',name:'lize',carMake:'toyota',driverLicense:'G2',depTime:'10:00am'},
+//            {id:4,departure:'windsor',arrival:'waterloo',name:'lize',carMake:'toyota',driverLicense:'G2',depTime:'10:00am'},
+//            {id:5,departure:'windsor',arrival:'london',name:'lize',carMake:'toyota',driverLicense:'G2',depTime:'10:00am'},
+//            {id:6,departure:'london',arrival:'windsor',name:'lize',carMake:'toyota',driverLicense:'G2',depTime:'10:00am'},
+//            {id:7,departure:'windsor',arrival:'ottawa',name:'lize',carMake:'toyota',driverLicense:'G2',depTime:'10:00am'},
+//            {id:8,departure:'toronto',arrival:'ottawa',name:'lize',carMake:'toyota',driverLicense:'G2',depTime:'10:00am'}
 
         ];
 //

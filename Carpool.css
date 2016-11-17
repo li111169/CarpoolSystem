@@ -120,14 +120,14 @@
 .nav-pills > li.active > a >span,
 .nav-pills > li.active > a >span:hover,
 .nav-pills > li.active > a >span:focus {
-    padding:10px 0px;
+    padding:10px 0;
     border-bottom-style: outset;
     border-bottom-color:#66ffff;
 }
 
 
 .tabExtBox{
-    height: 100px;
+    /*height: 200%;*/
     width: 100%;
     background-color:#f6f6f6 ;
 }
@@ -142,92 +142,85 @@
 
 }
 
-
 /*search page css end*/
 
-.row .col-lg-8{
+.tab-content .row .basicInfo {
 
     border-style: solid ;
     border-width: 1px;
     border-color: #e1e3e8;
+    transition: all 0.1s ease-in 0s;
+    margin: 0 auto;
+    padding: 15px;
 }
-.row .col-lg-8:hover{
+.tab-content .row .basicInfo:hover{
     background-color: white;
-    box-shadow: 10px 10px 20px #e1e3e8, -10px 10px 20px #e1e3e8;
-}
-.basicInfo{
-    height: 30px;
-    margin-top: 10px;
-}
+    box-shadow: 10px 10px 10px  #e1e3e8, -10px 10px 10px  #e1e3e8;
+    margin-bottom: 10px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.thumbnail{
-    height: 205px;
-}
-.home-page{
-    width:100%;
-}
-.inner-bg {
-    padding: 60px 0 80px 0;
 }
 
-.top-content .text {
-    color: #fff;
+.infoLabel{
+
+    margin-top: 0;
+}
+.tab-content .basicInfo .route{
+    font-size: 26px;
+}
+.glyphicon-heart{
+    float: right;
+    color:gainsboro;
+    font-size: 20px;
+
+}
+.currentColor{
+    color:red;
+}
+.tab-content .basicInfo .media-object{
+    padding-top: 36px;
+    padding-left: 36px;
+}
+.tab-content .basicInfo .media-body{
+    padding-left: 40px;
+
 }
 
-.top-content .text h1 { color: #fff; }
-
-.top-content .description {
-    margin: 20px 0 10px 0;
+.tab-content .basicInfo .name{
+    display: block;
+    font-size: 15px;
+}
+.tab-content .basicInfo .time{
+    display: block;
+    font-size: 15px;
+}
+.tab-content .basicInfo .license{
+    display: block;
+    font-size: 15px;
+}
+.tab-content .basicInfo .make{
+    font-size: 15px;
 }
 
-.top-content .description p { opacity: 0.8; }
 
 
-.form-box {
-    margin-top: 70px;
-}
 
-.form-box textarea{
-    height: 100px;
-}
 
-.form-top {
-    overflow: hidden;
-    padding: 0 25px 15px 25px;
-    background: #fff;
-    -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
-    text-align: left;
-}
 
-.form-top-left {
-    float: left;
-    width: 75%;
-    padding-top: 25px;
-}
 
-.form-top-left h3 { margin-top: 0; }
 
-.form-bottom form button.btn {
-    width: 100%;
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
