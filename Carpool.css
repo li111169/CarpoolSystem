@@ -44,9 +44,10 @@
 .navbar{
     margin: 0px;
     border:none;
+    position: relative;
 }
 .navbar-inverse{
-    z-index: 3;
+    z-index: 4;
 }
 .navbar-default {
     background-color: transparent;
@@ -152,11 +153,12 @@
     transition: all 0.1s ease-in 0s;
     margin: 0 auto;
     padding: 15px;
+    z-index: 0;
 }
 .tab-content .row .basicInfo:hover{
     background-color: white;
-    box-shadow: 10px 10px 10px  #e1e3e8, -10px 10px 10px  #e1e3e8;
-    margin-bottom: 10px;
+    box-shadow: 10px 10px 20px  #e1e3e8, -10px 10px 20px  #e1e3e8;
+    z-index: 2;
 
 
 
@@ -175,9 +177,7 @@
     font-size: 20px;
 
 }
-.currentColor{
-    color:red;
-}
+
 .tab-content .basicInfo .media-object{
     padding-top: 36px;
     padding-left: 36px;
@@ -201,6 +201,27 @@
 }
 .tab-content .basicInfo .make{
     font-size: 15px;
+}
+
+.collectedInfoBox{
+    position: fixed;
+    bottom: 0;
+    border: none;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+}
+.collectedInfoBox .collectedInfo{
+    height: 40px;
+    width: 288px;
+    background-color: #212121;
+    color: white;
+    display: inline-block;
+    padding-top: 10px;
+    border-radius: 3px;
+
 }
 
 
