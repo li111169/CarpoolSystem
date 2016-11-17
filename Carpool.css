@@ -203,6 +203,27 @@
     font-size: 15px;
 }
 
+.collectedInfoBox{
+    position: fixed;
+    bottom: 0;
+    border: none;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+}
+.collectedInfoBox .collectedInfo{
+    height: 40px;
+    width: 288px;
+    background-color: #212121;
+    color: white;
+    display: inline-block;
+    padding-top: 10px;
+    border-radius: 3px;
+
+}
+
 
 
 
